@@ -50,6 +50,14 @@ public class Main {
         //	•	Logika dodawania produktu powinna uwzględniać przypadek ponownego dodania tego samego produktu.
         //	•	W main zaprezentuj działanie zamówienia i danych wyliczalnych.
 
+        Product pencil = new Product("Pencil", 5);
+        OrderProduct op = new OrderProduct(pencil, 50, 0.2);
+        Order order = new Order();
+        order.addOrderProduct(op, 10);
+        System.out.println(op.toString());
+        op.setHowMany(10);
+        System.out.println(op.toString());
+
 
 
 
