@@ -22,14 +22,7 @@ public class OrderProduct {
     public int getHowMany() {
         return howMany;
     }
-    public double getDiscount() {
-        return discount;
-    }
-    public int getPrice() {
-        return product.getPrice();
-    }
-
-    public double totalPrice(int price) {
+    public double totalPrice() {
         return howMany * product.getPrice() * (1 - discount);
     }
     public Product getProduct() {
@@ -37,7 +30,7 @@ public class OrderProduct {
     }
 
     public String toString() {
-        return "Product: " + product + ",discount: " + discount + " total price " + totalPrice(product.getPrice());
+        return "Product: " + product + ",discount: " + discount + " total price " + totalPrice();
     }
 
     public void setHowMany(int howMany) {

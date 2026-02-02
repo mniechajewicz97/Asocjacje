@@ -1,15 +1,13 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Team {
     private List<Player> teamList = new ArrayList<>();
 
-    public Team(List<Player> players) {
-        this.teamList = new ArrayList<>(players);
-    }
-
     public List<Player> getTeam() {
-        return teamList;
+        return List.copyOf(teamList);
     }
 
     public int sumScore() {

@@ -6,11 +6,11 @@ public class Order {
 
     List<OrderProduct> orderList = new ArrayList<>();
 
-    public void addOrderProduct(OrderProduct orderProduct, int howMany) {
+    public void addOrderProduct(OrderProduct orderProduct) {
 
         for (OrderProduct op : orderList) {
             if (op.getProduct().equals(orderProduct.getProduct())) {
-                op.setHowMany(op.getHowMany() + howMany);
+                op.setHowMany(op.getHowMany() + orderProduct.getHowMany());
                 return;
             }
         }

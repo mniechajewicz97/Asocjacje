@@ -28,8 +28,7 @@ public class Main {
         Player lawendowski = new Player("Roman", "Lawendowski", 1988, 50, true);
         Player szczesniak = new Player("Witold", "Szczęśniak", 1990, 35, true);
         Player gzik = new Player("Mateusz", "Gzik", 1990, 20);
-        Team team = new Team(new ArrayList<>());
-
+        Team team = new Team(); // nie potrzbujemy tworzy pol konstruktora
         team.addPlayer(lawendowski);
         team.addPlayer(szczesniak);
         team.addPlayer(gzik);
@@ -39,6 +38,11 @@ public class Main {
         System.out.println("Punkty całej drużyny wynoszą " + team.sumScore());
         team.addPlayer(lawendowski);
         System.out.println("Najwyższy wynik to " + team.theBestScore() + " zdobyty przez " + team.getBestPlayer());
+        System.out.println("0000000000");
+        System.out.println(team.getTeam());
+//        team.getTeam().removeFirst(); nie uda sie bo teraz jest niemutowalna
+        System.out.println(team.getTeam());
+        System.out.println("0000000000");
 
         System.out.println();
         System.out.println("Zadanie 2");
@@ -53,10 +57,12 @@ public class Main {
         Product pencil = new Product("Pencil", 5);
         OrderProduct op = new OrderProduct(pencil, 50, 0.2);
         Order order = new Order();
-        order.addOrderProduct(op, 10);
-        System.out.println(op.toString());
+        order.addOrderProduct(op);
+        System.out.println(op);
         op.setHowMany(10);
-        System.out.println(op.toString());
+        System.out.println(op);
+
+        Test test = new Test();
 
 
 
