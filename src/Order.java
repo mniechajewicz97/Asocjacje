@@ -3,8 +3,15 @@ import java.util.List;
 import java.util.Objects;
 
 public class Order {
-
+    private Client client;
     List<OrderProduct> orderList = new ArrayList<>();
+
+    public Order() {
+        }
+    public Order(Client client) {
+        client.addOrder(this);
+        this.client = client;
+    }
 
     public void addOrderProduct(OrderProduct orderProduct) {
 
@@ -17,6 +24,7 @@ public class Order {
         orderList.add(orderProduct);
     }
 
+
     public List<OrderProduct> getOrderList() {
         return orderList;
     }
@@ -24,4 +32,7 @@ public class Order {
         this.orderList = orderList;
 
     }
+    public Client getClient() { return client; }
+
+
 }

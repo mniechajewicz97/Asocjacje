@@ -5,6 +5,7 @@ public class OrderProduct {
     private int howMany;
     private double discount;
     private boolean orderedByClient;
+    private Client client;
 
 
     public OrderProduct(Product product, int howMany, double discount) {
