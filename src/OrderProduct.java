@@ -4,20 +4,11 @@ public class OrderProduct {
     private Product product;
     private int howMany;
     private double discount;
-    private boolean orderedByClient;
-
 
     public OrderProduct(Product product, int howMany, double discount) {
         this.product = product;
         this.howMany = howMany;
         this.discount = discount;
-
-    }
-    public OrderProduct(Product product, int howMany, double discount, boolean orderedByClient) {
-        this.product = product;
-        this.howMany = howMany;
-        this.discount = discount;
-        this.orderedByClient = orderedByClient;
     }
     public int getHowMany() {
         return howMany;
@@ -32,7 +23,6 @@ public class OrderProduct {
     public String toString() {
         return "Product: " + product + ",discount: " + discount + " total price " + totalPrice();
     }
-
     public void setHowMany(int howMany) {
         this.howMany = howMany;
     }

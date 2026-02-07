@@ -19,15 +19,6 @@ public class Player {
         this.score = score;
         this.isSpecialist = isSpecialist;
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
     public int getAge() {
         return 2026 - yearOfBirth;
     }
@@ -35,11 +26,6 @@ public class Player {
     public int getScore() {
         return score;
     }
-
-    public Boolean getSpecialist() {
-        return isSpecialist;
-    }
-
     public String toString() {
         if (isSpecialist == null) {
             return name + " " + surname;

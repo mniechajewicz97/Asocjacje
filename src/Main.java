@@ -46,13 +46,13 @@ public class Main {
 
         System.out.println();
         System.out.println("Zadanie 2");
-        //Adrian
         //Zamodeluj zamówienie zawierające produkty.
         //	•	Zamówienie przechowuje produkty nie bezpośrednio, ale przez obiekt pośredni (relacja ma własne dane).
         //	•	Klient zamówienia jest opcjonalny i obsłużony przez przeciążenie konstruktora.
         //	•	Wszystkie wartości finansowe mają być wyliczane, nie przechowywane.
         //	•	Logika dodawania produktu powinna uwzględniać przypadek ponownego dodania tego samego produktu.
         //	•	W main zaprezentuj działanie zamówienia i danych wyliczalnych.
+
 
         Product pencil = new Product("Pencil", 5);
         OrderProduct op = new OrderProduct(pencil, 50, 0.2);
@@ -62,7 +62,13 @@ public class Main {
         op.setHowMany(10);
         System.out.println(op);
 
-        Test test = new Test();
+
+        Client sush = new Client("Mysza","Miałczyńska- Małolepsza", "sush@chrupki.pl");
+        Product chrupki = new Product("Chrupki",10);
+        OrderProduct op2 = new OrderProduct(chrupki, 50, 0.2);
+        Order sushOrder = new Order(sush);
+        sushOrder.addOrderProduct(op2);
+        System.out.println(op2);
 
 
 
