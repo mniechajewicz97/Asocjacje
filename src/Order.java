@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Order {
     private Client client;
@@ -28,10 +27,7 @@ public class Order {
     public List<OrderProduct> getOrderList() {
         return orderList;
     }
-    public void setOrderList(List<OrderProduct> orderList) {
-        this.orderList = orderList;
 
-    }
     public Client getClient() { return client; }
 
 

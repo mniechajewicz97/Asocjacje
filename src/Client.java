@@ -19,18 +19,6 @@ public class Client {
     public void removeOrder(Order order) {
         ordersClient.remove(order);
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public String getEmail() {
-        return email;
-    }
     public List<Order> getOrdersClient() { return ordersClient; }
 
 
